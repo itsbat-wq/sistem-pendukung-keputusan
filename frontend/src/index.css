@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+/* ============================================================
+   SPK SAW — Design System (Light Mode Admin Dashboard)
+   ============================================================ */
+
+/* Custom CSS Variables - Light Theme */
+:root {
+  --bg-primary: #f8fafc;
+  --bg-card: #ffffff;
+  --border-subtle: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --accent-telkom: #dc2626; /* Telkom Red */
+  --accent-emerald: #059669;
+  --accent-amber: #d97706;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Card Effect (Light Mode) */
+.glass {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+/* Gradient Text (Subtle for Light Mode) */
+.gradient-text {
+  background: linear-gradient(135deg, #ef4444, #dc2626, #b91c1c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Input Styles */
+.input-dark {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #1e293b;
+  transition: all 0.2s ease;
+}
+
+.input-dark:focus {
+  border-color: #dc2626; /* Telkom Red focus */
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+}
+
+/* Button Styles */
+.btn-primary {
+  background: #dc2626; /* Telkom Red */
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #b91c1c; /* Darker Red */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25);
+}
+
+.btn-success {
+  background: #059669;
+  transition: all 0.2s ease;
+}
+
+.btn-success:hover {
+  background: #047857;
+  transform: translateY(-1px);
+}
+
+.btn-danger {
+  background: #dc2626;
+  transition: all 0.2s ease;
+}
+
+/* Table Styles */
+.table-header {
+  background: #f1f5f9;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+/* Rank Badges */
+.rank-1 {
+  background: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+.rank-2 {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+}
+
+.rank-3 {
+  background: #ffedd5;
+  color: #c2410c;
+  border: 1px solid #fed7aa;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Recharts Custom for Light Mode */
+.recharts-default-tooltip {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+}
+
+.recharts-tooltip-label {
+  color: #0f172a !important;
+  font-weight: 600 !important;
+}
